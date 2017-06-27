@@ -136,9 +136,9 @@ compile-all:
 	$(CC) $(CFLAGS) $(INCLUDE) -D$(PLATFORM) -c $(OBJS:.o=.c) 
 
 #.phony target for cleanup the object files and executable.
-REBUILDABLES=$(OBJS) $(TARGET)
 clean:
-	rm -rf $(REBUILDABLES)
+	rm -rf *.o
+	rm -rf *.out
 	rm -rf *.i
 	rm -rf *.dep
 	rm -rf *.asm
